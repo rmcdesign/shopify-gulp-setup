@@ -1,0 +1,65 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
+    coderay (1.1.0)
+    diff-lcs (1.2.5)
+    filewatcher (0.5.3)
+      trollop (~> 2.0)
+    htmlentities (4.3.3)
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.3)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    method_source (0.8.2)
+    mimemagic (0.3.2)
+    mini_portile2 (2.1.0)
+    multi_xml (0.6.0)
+    nokogiri (1.6.8)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
+    pkg-config (1.1.7)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    public_suffix (2.0.4)
+    rspec (3.2.0)
+      rspec-core (~> 3.2.0)
+      rspec-expectations (~> 3.2.0)
+      rspec-mocks (~> 3.2.0)
+    rspec-core (3.2.0)
+      rspec-support (~> 3.2.0)
+    rspec-expectations (3.2.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-mocks (3.2.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-support (3.2.1)
+    shopify_theme (0.0.25)
+      filewatcher
+      httparty (~> 0.13.0)
+      json (~> 1.8.0)
+      launchy
+      mimemagic
+      thor (>= 0.14.4)
+    slop (3.6.0)
+    thor (0.19.4)
+    trollop (2.1.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  htmlentities
+  nokogiri
+  pry
+  rspec
+  shopify_theme
+
+BUNDLED WITH
+   1.12.5

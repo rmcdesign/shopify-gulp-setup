@@ -1,0 +1,632 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0b1 | 201101
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* remember to define visible focus styles!
+:focus {
+	outline: ?????;
+} */
+
+/* remember to highlight inserts somehow! */
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.col-xs-1 {
+  width: 8.33333%;
+}
+
+.col-xs-2 {
+  width: 16.66667%;
+}
+
+.col-xs-3 {
+  width: 25%;
+}
+
+.col-xs-4 {
+  width: 33.33333%;
+}
+
+.col-xs-5 {
+  width: 41.66667%;
+}
+
+.col-xs-6 {
+  width: 50%;
+}
+
+.col-xs-7 {
+  width: 58.33333%;
+}
+
+.col-xs-8 {
+  width: 66.66667%;
+}
+
+.col-xs-9 {
+  width: 75%;
+}
+
+.col-xs-10 {
+  width: 83.33333%;
+}
+
+.col-xs-11 {
+  width: 91.66667%;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+.wrap,
+.container,
+.row,
+.col {
+  *zoom: 1;
+}
+
+.wrap:after,
+.container:after,
+.row:after,
+.col:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wrap {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  margin-left: -6px;
+  margin-right: -6px;
+}
+
+.col {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
+
+.wrap,
+.container,
+.col {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+img {
+  border: 0 none;
+}
+
+img,
+iframe {
+  max-width: 100%;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.625;
+  -webkit-font-smoothing: antialiased;
+  color: #09f;
+}
+
+h1 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 45px;
+  padding: 0.5em 0;
+}
+
+h2 {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 35px;
+  padding: 0.5em 0;
+}
+
+h3 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 29px;
+  padding: 0.5em 0;
+}
+
+h4 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 26px;
+  padding: 0.5em 0;
+}
+
+h5 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 25px;
+  padding: 0.5em 0;
+}
+
+h6 {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 23px;
+  padding: 0.5em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 0;
+  color: #000;
+}
+
+p.lead {
+  font-size: 1.125em;
+}
+
+p {
+  padding: .5em 0;
+  margin: 0;
+}
+
+.wrap:after,
+.container:after,
+.row:after,
+.col:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  color: #000;
+}
+
+body {
+  background-color: #fff;
+}
+
+@media (min-width: 544px) {
+  .col-sm-1 {
+    width: 8.33333%;
+  }
+
+  .col-sm-2 {
+    width: 16.66667%;
+  }
+
+  .col-sm-3 {
+    width: 25%;
+  }
+
+  .col-sm-4 {
+    width: 33.33333%;
+  }
+
+  .col-sm-5 {
+    width: 41.66667%;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+  }
+
+  .col-sm-7 {
+    width: 58.33333%;
+  }
+
+  .col-sm-8 {
+    width: 66.66667%;
+  }
+
+  .col-sm-9 {
+    width: 75%;
+  }
+
+  .col-sm-10 {
+    width: 83.33333%;
+  }
+
+  .col-sm-11 {
+    width: 91.66667%;
+  }
+
+  .col-sm-12 {
+    width: 100%;
+  }
+
+  .wrap {
+    max-width: 544px;
+  }
+
+  .row {
+    margin-left: -9px;
+    margin-right: -9px;
+  }
+
+  .wrap,
+  .container,
+  .col {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-1 {
+    width: 8.33333%;
+  }
+
+  .col-md-2 {
+    width: 16.66667%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-md-4 {
+    width: 33.33333%;
+  }
+
+  .col-md-5 {
+    width: 41.66667%;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .col-md-7 {
+    width: 58.33333%;
+  }
+
+  .col-md-8 {
+    width: 66.66667%;
+  }
+
+  .col-md-9 {
+    width: 75%;
+  }
+
+  .col-md-10 {
+    width: 83.33333%;
+  }
+
+  .col-md-11 {
+    width: 91.66667%;
+  }
+
+  .col-md-12 {
+    width: 100%;
+  }
+
+  .wrap {
+    max-width: 768px;
+  }
+
+  .row {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  .wrap,
+  .container,
+  .col {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-1 {
+    width: 8.33333%;
+  }
+
+  .col-lg-2 {
+    width: 16.66667%;
+  }
+
+  .col-lg-3 {
+    width: 25%;
+  }
+
+  .col-lg-4 {
+    width: 33.33333%;
+  }
+
+  .col-lg-5 {
+    width: 41.66667%;
+  }
+
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  .col-lg-7 {
+    width: 58.33333%;
+  }
+
+  .col-lg-8 {
+    width: 66.66667%;
+  }
+
+  .col-lg-9 {
+    width: 75%;
+  }
+
+  .col-lg-10 {
+    width: 83.33333%;
+  }
+
+  .col-lg-11 {
+    width: 91.66667%;
+  }
+
+  .col-lg-12 {
+    width: 100%;
+  }
+
+  .wrap {
+    max-width: 992px;
+  }
+
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .wrap,
+  .container,
+  .col {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1366px) {
+  .col-xl-1 {
+    width: 8.33333%;
+  }
+
+  .col-xl-2 {
+    width: 16.66667%;
+  }
+
+  .col-xl-3 {
+    width: 25%;
+  }
+
+  .col-xl-4 {
+    width: 33.33333%;
+  }
+
+  .col-xl-5 {
+    width: 41.66667%;
+  }
+
+  .col-xl-6 {
+    width: 50%;
+  }
+
+  .col-xl-7 {
+    width: 58.33333%;
+  }
+
+  .col-xl-8 {
+    width: 66.66667%;
+  }
+
+  .col-xl-9 {
+    width: 75%;
+  }
+
+  .col-xl-10 {
+    width: 83.33333%;
+  }
+
+  .col-xl-11 {
+    width: 91.66667%;
+  }
+
+  .col-xl-12 {
+    width: 100%;
+  }
+
+  .wrap {
+    max-width: 1240px;
+  }
+}
