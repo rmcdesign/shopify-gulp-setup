@@ -1,0 +1,197 @@
+$grid-columns: 12;
+
+$gutter: (
+  xs: 12px,
+  sm: 18px,
+  md: 24px,
+  lg: 30px,
+  xl: 30px
+);
+
+$breakpoints: (
+  sm: 544px,
+  md: 768px,
+  lg: 992px,
+  xl: 1366px
+);
+$breakpoints-max: (
+  sm: (map-get($breakpoints, md)-1),
+  md: (map-get($breakpoints, lg)-1),
+  lg: (map-get($breakpoints, xl)-1)
+);
+
+@mixin bp($breakpoint, $type: 'up') {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @if $type == 'up' {
+      @media (min-width: map-get($breakpoints, $breakpoint ) ) {
+        @content;
+      }
+    }
+    @if $type == 'down' {
+      @media (max-width: (map-get($breakpoints, $breakpoint ))-1 ) {
+        @content;
+      }
+    }
+    @if $type == 'only' and $breakpoint != 'xl' {
+      @media (min-width: map-get($breakpoints, $breakpoint) ) and ( max-width: map-get($breakpoints-max, $breakpoint) ) {
+        @content;
+      }
+    }
+    @if $type == 'only' and $breakpoint == 'xl' {
+      @media (min-width: map-get($breakpoints, $breakpoint ) ) {
+        @content;
+      }
+      @warn "xl only not available as there is no max value defaulting to xl up"
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin calc-grid-column($index, $class) {
+  .col-#{$class}-#{$index} {
+    width: percentage(($index / $grid-columns));
+  }
+}
+
+@mixin loop-grid-columns($columns, $class) {
+  @for $i from 1 through $columns {
+    @include calc-grid-column($i, $class);
+  }
+}
+
+@mixin make-grid($class) {
+  @include loop-grid-columns($grid-columns, $class);
+}
+
+// Will spit out all the column size classes
+
+@include make-grid(xs);
+
+@include bp(sm) {
+  @include make-grid(sm);
+}
+
+@include bp(md) {
+  @include make-grid(md);
+}
+
+@include bp(lg) {
+  @include make-grid(lg);
+}
+
+@include bp(xl) {
+  @include make-grid(xl);
+}
+
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  *zoom: 1;
+}
+
+%clearfix {
+  @include clearfix();
+}
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+// layout
+
+.wrap {
+  @extend %clearfix;
+  margin-left: auto;
+  margin-right: auto;
+  // max-width: 400px;
+  @include bp(sm) {
+    max-width: map-get($breakpoints, sm);
+  }
+  @include bp(md) {
+    max-width: map-get($breakpoints, md);
+  }
+  @include bp(lg) {
+    max-width: map-get($breakpoints, lg);
+  }
+  @include bp(xl) {
+    max-width: 1240px; // max-width for site on large screens
+  }
+}
+
+.container {
+  @extend %clearfix;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  @extend %clearfix;
+  margin-left: -(map-get($gutter, xs)/2);
+  margin-right: -(map-get($gutter, xs)/2);
+  @include bp(sm) {
+    margin-left: -(map-get($gutter, sm)/2);
+    margin-right: -(map-get($gutter, sm)/2);
+  }
+  @include bp(md) {
+    margin-left: -(map-get($gutter, md)/2);
+    margin-right: -(map-get($gutter, md)/2);
+  }
+  @include bp(lg) {
+    margin-left: -(map-get($gutter, lg)/2);
+    margin-right: -(map-get($gutter, lg)/2);
+  }
+}
+
+// Keeping seperate col class so I can adjust padding at various breakpoints
+.col {
+  @extend %clearfix;
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
+
+.wrap,
+.container,
+.col {
+  padding-left: (map-get($gutter, xs)/2);
+  padding-right: (map-get($gutter, xs)/2);
+  @include bp(sm) {
+    padding-left: (map-get($gutter, sm)/2);
+    padding-right: (map-get($gutter, sm)/2);
+  }
+  @include bp(md) {
+    padding-left: (map-get($gutter, md)/2);
+    padding-right: (map-get($gutter, md)/2);
+  }
+  @include bp(lg) {
+    padding-left: (map-get($gutter, lg)/2);
+    padding-right: (map-get($gutter, lg)/2);
+  }
+}
+
+// TODO: Add helper classes for vertical padding
+
+img {
+  border: 0 none;
+}
+
+img,
+iframe {
+  max-width: 100%;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}

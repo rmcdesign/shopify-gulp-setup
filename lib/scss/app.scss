@@ -1,0 +1,13 @@
+@import "includes/variables";
+@import "includes/mixins";
+@import "includes/reset";
+@import "includes/grid";
+@import "includes/typography";
+
+@import "includes/placeholders";
+
+@import "includes/base";
+
+body {
+  background-color: #fff;
+}

@@ -1,0 +1,78 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.625;
+  -webkit-font-smoothing: antialiased;
+  color: $body-color;
+  @include bp(lg, up) {
+    font-size: 16px;
+  }
+}
+
+h1 {
+  @include fontSize(30px);
+  line-height: 45px;
+  padding: 0.5em 0;
+  @include bp(lg, up) {
+    @include fontSize(36px);
+  }
+}
+
+h2 {
+  @include fontSize(26px);
+  line-height: 35px;
+  padding: 0.5em 0;
+  @include bp(lg, up) {
+    @include fontSize(30px);
+  }
+}
+
+h3 {
+  @include fontSize(20px);
+  line-height: 29px;
+  padding: 0.5em 0;
+  @include bp(lg, up) {
+    @include fontSize(24px);
+  }
+}
+
+h4 {
+  @include fontSize(16px);
+  line-height: 26px;
+  padding: 0.5em 0;
+  @include bp(lg, up) {
+    @include fontSize(18px);
+  }
+}
+
+h5 {
+  @include fontSize(14px);
+  line-height: 25px;
+  padding: 0.5em 0;
+}
+
+h6 {
+  @include fontSize(12px);
+  line-height: 23px;
+  padding: 0.5em 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: bold;
+  margin: 0;
+  color: $heading-color;
+}
+
+p.lead {
+  font-size: 1.125em;
+}
+
+p {
+  padding: .5em 0;
+  margin: 0;
+}
